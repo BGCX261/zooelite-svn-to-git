@@ -1,0 +1,34 @@
+This file should log all outstanding issues or things that we would like to work on/address
+
+Large Notes
+--------------------
+-Introduce idea of lines. Define a junction station as a station connecting to at least 3 other stations. Define a line as a junction through a series of stations to a terminal station.
+-Make this idea of junction stations impact the size of such stations when built since we know the overall plan
+-Create a way to pull the stick out of town authories asses
+-Attack subsidies if time
+-Should we care about train turnaround settings? If we don't they might have issues at drive through stations...
+
+City Rail Station Placement Finder
+---------------------
+-Radius search for things at the edge of the map will fail...it will not add all valid tiles within a rectangle, if it is near the edge it will just fail.
+		UPDATE: Almost 100% working
+-Issues can arise when the city is near the center of the map (in direction of variable)
+
+Regional Rail Station Placement Finder
+------------------------
+-Mostly ok suffers from many of the same issues as above
+-Do we care about rail expandability?
+
+City Bus Station Placer
+------------------------
+- Very accurate and fast, however inital search should probably be limited to 1 station and then repeated. Inital placement of 4+ stations in large cities can be slow.
+		UPDATE: Done via Main.nut control
+- Needs to actually return the list of stations built...UPDATE: I think it does now
+- Some stations are getting built simply because they can...occasionally have NO coverage - Eliminate station placements with 0 Pull? DONE...still builds some outliar stations, but this will be grown into
+- The rail station is not taken into consideration when placing stations, let's try to avoid placing anywhere near a rail station...FIXED I think
+- IMPORTANT: Connect Bus tiles within a city so we can take shortcuts...
+
+Overall Running
+----------------------
+- Save/Load and Data Structures...saving routes?
+- For God Sake's manage money...
